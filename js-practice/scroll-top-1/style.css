@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 3000px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: skyblue;
+    height: 80px;
+    width: 100%;
+
+    position: fixed;
+    top: -80px;
+
+    transition: .5s linear;
+}
+
+.scroll-top {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    font-size: 15px;
+    cursor: pointer;
+
+    position:fixed;
+    bottom: 45px;
+    right: 45px;
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/countdown-timer/erol-ahmed-d3pTF3r_hwY-unsplash.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    font-family: "Poppings", sans-serif;
+    margin: 0;
+}

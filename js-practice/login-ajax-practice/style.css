@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    border: 3px solid pink;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+form > span {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%);
+    width: 100%;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+form > label {
+    height: 50px;
+}
+
+form > label > input {
+    font-size: 22px;
+    height: 30px;
+    padding-left: 20px;
+    margin: 0 10px;
+}
+
+

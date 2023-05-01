@@ -1,0 +1,53 @@
+form {
+    width: 600px;
+    padding: 20px;
+    border: 3px solid pink;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: relative;
+}
+
+form > span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    font-size: 20px;
+    color: red;
+    display: none;
+}
+
+form > label {
+    height: 50px;
+    font-size: 20px;
+}
+
+form > label > input {
+    width: 300px;
+    padding-left: 20px;
+    font-size: 20px;
+    height: 20px;
+}
+
+form > button {
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+form > p {
+    padding-bottom: 10px;
+}
+
+form > p > a {
+    color: red;
+    font-style: italic;
+}
+
+form > label > select {
+    padding-left: 20px;
+    padding: 5px;
+    font-size: 20px;
+}

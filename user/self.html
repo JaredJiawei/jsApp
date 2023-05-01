@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="header">
+        个人中心页面
+        <p class="active">
+            <a href="./index.html">返回首页</a>
+        </p>
+    </div>
+
+    <form>
+        <label>
+            User Name:<input class="username" disabled type="text">
+        </label>
+        <label>
+            New Nick Name:<input type="text" name="nickname">
+        </label>
+        <label>
+            Age:<input type="text" name="age">
+        </label>
+        <label>
+            Gender:<select name="gender">
+                <option value="">Pls Select</option>
+                <option value="男">Male</option>
+                <option value="女">Female</option>
+            </select>
+        </label>
+        <p>
+           <a href="./rpassword.html">Change Passwords</a>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./js/self.js"></script>
+</body>
+</html>

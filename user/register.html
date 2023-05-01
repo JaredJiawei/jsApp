@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="./jquery/jquery.min.js"></script> -->
+    <!-- <script src="./js/register.js"></script> -->
+</head>
+<body>
+    <div class="header">
+        Register page
+    </div>
+
+    <form>
+        <span>该用户名已存在，请更新后重试</span>
+        <label>
+            User Name:<input type="text" name="username">
+        </label>
+        <label>
+            Passwords:<input type="text" name="password">
+        </label>
+        <label>
+            Repeat Passwords:<input type="text" name="rpassword">
+        </label>
+        <label>
+            Alias昵称:<input type="text" name="nickname">
+        </label>
+        <p>
+            已有账号:<a href="./login.html"> 直接登录</a>
+        </p>
+        <button>Register</button>
+    </form>
+
+    <script>
+
+        $('form').on('submit', function (e) {
+            //1.阻止默认行为
+            e.preventDefault()
+            console.log('我要发送ajax请求')
+            //2.采集用户信息
+            const data = $('form').serialize()
+
+            console.log(data)
+
+            //3.发送Ajax请求
+            $.post('http://localhost:5500/users/register', data, res => {
+                console.log(res)
+                //4. 判断结果，来决定是否提示错误
+                if(res.code === 0) {
+                    //提示错误
+                    $('form > span').css('display', 'block')
+                    return  
+                }
+
+                //5. 注册成功，跳转页面
+                // 代码能执行到这里，表示注册成功了
+
+                window.alert('Congras, 注册成功，点击确定跳转到登录页 ');
+                window.location.href ='/user/login.html';
+                return false;
+            })
+
+        })
+
+    </script>
+</body>
+</html>
